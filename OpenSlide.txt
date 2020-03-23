@@ -1,0 +1,24 @@
+OpenSlide Basic Definition and functions:
+
+1. level_count : The number of levels in the slide. Levels are numbered from 0
+		 (highest resolution to the level_count -1 (the lowest resolution).
+
+2. dimension: A( width, height) tuple for level 0 of the slide
+
+3. level_dimensions: A list of (width, height) tuples, one for each level of the 
+	             slide. level_dimensions[k] are the dimensions of level k.
+
+4. level_downsamples: A list of downsample factors for each level of the slide.
+	 	      level_downsamples[k] is the downsample factor of level k.
+
+5. read_region(location, level, size): Return an RGBA Image containing the contents
+		     of the specified region.
+		     
+!!!!
+6. OpenSlide image colorspace is RGBA
+--- to use OpenSlide output in QImage, need to transfer OpenSlide format from 
+--- RGBA to ARGB32 
+
+7. numpy.require : return ndarray of the provided type that satisfies requirements 
+
+
